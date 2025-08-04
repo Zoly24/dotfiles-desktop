@@ -1,0 +1,14 @@
+@define-color background-color transparent;
+@define-color color1 #000000;
+@define-color color2 #333333;
+@define-color color3 #666666;
+@define-color color4 #999999;
+@define-color color5 #cccccc;
+@define-color color6 #ffffff;
+
+@define-color accent-blue #00ceff;
+@define-color accent-purple #9d00ff;
+
+@define-color charging #00ac26;
+@define-color critital #ae0a00;
+@define-color warning #cea700;
