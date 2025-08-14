@@ -74,4 +74,10 @@ return {
             vim.opt.background = "dark"
         end,
     },
+    {
+        "catppuccin/nvim",
+        config = function()
+            --vim.cmd("colorscheme catppuccin-frappe")
+        end,
+    },
 }
