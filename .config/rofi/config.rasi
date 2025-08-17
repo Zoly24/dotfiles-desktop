@@ -8,7 +8,7 @@ configuration {
     display-window:              " ";
     drun-display-format:         "{name}";
     window-format:               "{w}{t}";
-    font:                        "0xProto";
+    font:                        "Google Sans Code";
     icon-theme:                  "Tela-circle-dracula";
 }
 

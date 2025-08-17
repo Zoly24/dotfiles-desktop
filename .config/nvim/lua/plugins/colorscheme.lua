@@ -80,4 +80,10 @@ return {
             --vim.cmd("colorscheme catppuccin-frappe")
         end,
     },
+    {
+        "4513ECHO/vim-colors-hatsunemiku",
+        config = function()
+            --vim.cmd("colorscheme hatsunemiku")
+        end,
+    },
 }
