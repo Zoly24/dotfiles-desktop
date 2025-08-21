@@ -1,7 +1,7 @@
-@import url('./white-black-theme/black-white-theme.css');
+@import url('/home/zoly/.config/hellwal/generated/waybar-colors.css');
 
 * {
-    font-family: "Google Sans Code", FontAwesome, Roboto, Helvetica, Arial, sans-serif;
+    font-family: "TT Norms Pro Mono", FontAwesome, Roboto, Helvetica, Arial, sans-serif;
     font-size: 13px;
 }
 
@@ -16,22 +16,22 @@ window#waybar{
     padding:7px;
     margin:10 0 5 10;
     border-radius:10px;
-    background-color: @color6;
-    border: 2px outset @color1 ;
+    background-color: @background;
+    border: 2px outset @color1;
 }
 .modules-center {
     padding:7px;
     margin:10 0 5 0;
-    border-radius:10px;
-    background-color: @color6;
-    border: 2px outset @color1 ;
+    border-radius: 100px;
+    background-color: @background;
+    border: 2px outset @color1;
 }
 .modules-right {
     padding:7px;
     margin:10 10 5 0;
     border-radius:10px;
-    background-color: @color6;
-    border: 2px outset @color1 ;
+    background-color: @background;
+    border: 2px outset @color1;
 }
 
 window#waybar.hidden {
@@ -49,7 +49,7 @@ button {
 /* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
 button:hover {
     background: inherit;
-    box-shadow: inset 0 -3px #ffffff;
+    box-shadow: inset 0 -3px @foreground;
 }
 
 #workspaces {
@@ -58,7 +58,8 @@ button:hover {
 #workspaces button {
     all:unset;
     padding: 0px 7px;
-    color: rgba(0,0,0,.5);
+    color: @color4;
+    opacity: .75;
     transition: all .2s ease;
 }
 #workspaces button:hover {
@@ -69,7 +70,8 @@ button:hover {
 }
 
 #workspaces button.active {
-    color: @accent-purple;
+    color: @color4;
+    opacity: .75;
     border: none;
     text-shadow: 0px 0px 2px rgba(0, 0, 0, .5);
 }
@@ -86,7 +88,8 @@ button:hover {
     transition: all 1s ease;
 }
 #workspaces button.empty.active {
-    color: @accent-blue;
+    color: @color4;
+    opacity: .75;
     border: none;
     text-shadow: 0px 0px 2px rgba(0, 0, 0, .5);
 }
@@ -114,7 +117,7 @@ button:hover {
 #scratchpad,
 #mpd {
     padding: 0 10px;
-    color: #000000;
+    color: @foreground;
 }
 #window,
 
@@ -130,23 +133,21 @@ button:hover {
 
 #clock {
     background-color: transparent;
-    color: @color1;
 }
 
 #battery {
-    color: #000000;
 }
 
 #battery.charging {
-    color: @charging;
+    color: @foreground;
 }
 
 #batter.warning {
-    color: @warning;
+    color: @color5;
 }
 
 #battery.critical {
-    color: @critial;
+    color: @color2;
 }
 
 label:focus {
@@ -155,16 +156,14 @@ label:focus {
 
 #cpu {
     background-color: transparent;
-    color: #000000;
+    color: @foreground;
 }
 
 #memory {
     background-color: transparent;
-    color: @color1;
 }
 
 #disk {
-    background-color: #964B00;
 }
 
 #backlight {
@@ -172,21 +171,17 @@ label:focus {
 }
 
 #network{
-    color: @color1;
 }
 
 #pulseaudio {
-    color: #000000;
 }
 
 #pulseaudio.muted {
     background-color: transparent;
-    color: @color1;
 }
 
 #wireplumber {
     background-color: #fff0f5;
-    color: #000000;
 }
 
 #wireplumber.muted {
@@ -209,7 +204,7 @@ label:focus {
 
 #temperature {
     background-color: transparent;
-    color: @color1;
+    color: @foreground;
 }
 
 #temperature.critical {
@@ -239,7 +234,7 @@ label:focus {
 }
 
 #mpris {
-    color: @color1;
+    color: @foreground;
 }
 
 #language {
@@ -296,26 +291,18 @@ label:focus {
 }
 
 #custom-archlogo {
-    color: @color1;
+    color: @foreground;
     font-size: 20px;
 }
 
 #custom-power {
-    color: @color1;
+    color: @foreground;
 }
 
-#custom-separator1 {
-    color: @color1;
+#custom-separator1,
+#custom-separator2,
+#custom-separator3,
+#custom-separator4{
+    color: @color4;
 }
 
-#custom-separator2 {
-    color: @color1;
-}
-
-#custom-separator3 {
-    color: @color1;
-}
-
-#custom-separator4 {
-    color: @color1;
-}
