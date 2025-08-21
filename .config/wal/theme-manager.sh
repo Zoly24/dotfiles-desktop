@@ -40,11 +40,11 @@ else
         exit 1
     fi
 
-    swww img --transition-type wipe --transition-duration 1.5 --transition-fps 240 --transition-angle 30 --transition-step 200 "$WALLPAPER_PATH"
-
     wal -i "$WALLPAPER_PATH" -n
 
     reload_apps
+
+    swww img --transition-type wipe --transition-duration 1.5 --transition-fps 240 --transition-angle 30 --transition-step 200 "$WALLPAPER_PATH"
 
     echo "All themes applied."
 fi
