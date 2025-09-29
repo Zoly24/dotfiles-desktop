@@ -40,7 +40,7 @@ else
         exit 1
     fi
 
-    wal -i "$WALLPAPER_PATH" -n
+    wal --saturate .35 -i "$WALLPAPER_PATH" -n
 
     reload_apps
 
