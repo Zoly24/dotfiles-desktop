@@ -19,7 +19,7 @@ configuration {
 	display-keys:         " Keys";
 }
 
-@import "colors"
+@import "colors.rasi"
 
 * {
   spacing:       0.1em;
