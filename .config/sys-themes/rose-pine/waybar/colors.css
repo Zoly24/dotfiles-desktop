@@ -1,0 +1,12 @@
+/* ~/.config/sys-themes/onedark/waybar/colors.css */
+
+@define-color background #191724;      /* Main bar background */
+@define-color foreground #6e6a86;      /* General text color */
+@define-color surface_bright #26233a;  /* Module group background */
+@define-color primary #ebbcba;         /* Workspace buttons & Logo */
+@define-color on_primary #26233a;      /* Workspace button text */
+@define-color error #eb6f92;           /* Critical battery color */
+
+/* Optional: add these if you want to use them in the future */
+@define-color secondary #f6c177;
+@define-color tertiary #31748f;
