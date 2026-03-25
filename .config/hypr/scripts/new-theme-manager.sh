@@ -80,7 +80,7 @@ if [ -f "$THEME_PATH/neovim/name.txt" ]; then
 fi
 
 # --- 6. THE BIG REVEAL (Wallpaper & Reload) ---
-swww img "$processed_wall" --transition-type grow --transition-fps 60
+awww img "$processed_wall" --transition-type wave --transition-step 180 --transition-fps 240 --transition-wave 100,20
 
 pkill -SIGUSR2 waybar
 pkill -SIGUSR1 kitty
