@@ -49,7 +49,7 @@ return {
                 i(1, "TYPE"), -- e.g., WARNING, NOTE, QUOTE, ABSTRACT
                 t("]"),
                 t({ "", "> " }),
-                i(2, "Content goes here..."),
+                i(2, ""),
             }),
         })
 
