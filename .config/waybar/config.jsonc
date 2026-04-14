@@ -111,7 +111,7 @@
             "default": ["", ""]
         },
         "scroll-step": 1,
-        "on-click": "pavucontrol",
+        "on-click": "kitty -e pulsemixer",
         "ignored-sinks": ["Easy Effects Sink"]
     },
 

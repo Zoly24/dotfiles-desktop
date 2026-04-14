@@ -1,85 +1,80 @@
-// ~/.config/fastfetch/config.jsonc
-// See https://github.com/fastfetch-cli/fastfetch/wiki/Configuration for more details
-// See *.jsonc in https://github.com/fastfetch-cli/fastfetch/tree/dev/presets/examples for more examples
 {
   "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
-
   "logo": {
-    "type": "auto",
-    "source": "~/.config/fastfetch/white-eyes-small.jpg",
-    "position": "left",
-    "width":9,
-    "height":9,
-        "padding": {
-            "top": 1,
-            "right": 1,
-        }
+    "type": "none",
+    "source": "~/.config/fastfetch/arch",
+    "width": 8,
+    "height": 1,
   },
   "display": {
-    "separator": "    "
+    "separator": "  ",
   },
   "modules": [
+	  "break",
+	  "break",
     {
+      "key": "╭───────────╮",
+      "keyColor": "white",
       "type": "custom",
-      "format": "┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓"
     },
     {
+      "key": "│ {#red} user    {#white}│",
+      "keyColor": "white",
+      "type": "title",
+      "format": "{user-name}",
+    },
+    {
+      "key": "│ {#yellow}{icon} distro  {#white}│",
+      "format": "{2}",
+      "keyColor": "white",
       "type": "os",
-      "key": "  ",
-      "keyColor": "blue",
-      "format": "{pretty-name}"
     },
     {
+      "key": "│ {#green}󰖲 wm      {#white}│",
+      "format": "{1}",
+      "keyColor": "white",
       "type": "wm",
-      "key": "  󰨇",
-      "keyColor": "cyan",
-      "format": "{pretty-name}"
     },
     {
-      "type": "terminal",
-      "key": "  ",
-      "keyColor": "green",
-      "format": "{pretty-name}"
-    },
-    {
+      "key": "│ {#cyan} shell   {#white}│",
+      "keyColor": "white",
       "type": "shell",
-      "key": "  ",
-      "keyColor": "green",
-        "format": "{process-name}"
     },
     {
-      "type": "custom",
-      "format": "┣━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┫"
+      "key": "│ {#blue}󰍛 cpu     {#white}│",
+      "format": "{1}",
+      "keyColor": "white",
+      "type": "cpu",
+      "showPeCoreCount": true,
     },
     {
-      "type": "host",
-      "key": "  ",
-      "keyColor": "bright_red"
-    },
-    {
-      "type": "gpu",
-      "key": "  󱤓",
-        "format":"{name}",
-        "keyColor": "yellow"
-    },
-    {
+      "key": "│ {#magenta}󰉉 disk    {#white}│",
+      "format": "{1} / {2}",
+      "keyColor": "white",
       "type": "disk",
-      "key": "  ",
-      "keyColor": "bright_magenta",
-            "format": "{size-used} / {size-total}"
+      "folders": "/",
     },
     {
-        "type": "colors",
-        "key": "  ",
-        "keyColor": "white",
-        "symbol": "circle",
-        "block": {
-            "range": [1,6],
-        },
+      "key": "│ {#white} memory  {#white}│",
+      "format": "{1} / {2}",
+      "keyColor": "white",
+      "type": "memory",
     },
     {
+      "key": "├───────────┤",
+      "keyColor": "white",
       "type": "custom",
-      "format": "┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛"
-    }
-  ]
+    },
+    {
+      "key": "│ {#39} colors  {#white}│",
+      "keyColor": "white",
+      "type": "colors",
+      "symbol": "circle",
+    },
+    {
+      "key": "╰───────────╯",
+      "keyColor": "white",
+      "type": "custom",
+    },
+  ],
 }

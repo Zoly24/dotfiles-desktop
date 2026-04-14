@@ -41,10 +41,8 @@ PanelWindow {
         color: Colorscheme.bgAccent
         Text {
             anchors.centerIn: clockTime
-            font: {
-                family = barConfig.fontFamily;
-                pixelSize = barConfig.fontSize;
-            }
+            font.family: barConfig.fontFamily;
+            font.pixelSize: barConfig.fontSize;
             color: Colorscheme.fontColorPrimary
             text: ClockModule.time
         }

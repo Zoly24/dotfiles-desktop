@@ -11,7 +11,7 @@ include colors.conf
 #: individual font faces and even specify special fonts for particular
 #: characters.
 # BEGIN_KITTY_FONTS
-font_family      family="FiraMono Nerd Font Mono"
+font_family      family="JetBrainsMono Nerd Font Mono"
 bold_font        auto
 italic_font      auto
 bold_italic_font auto
@@ -29,7 +29,7 @@ bold_italic_font auto
 #: <https://sw.kovidgoyal.net/kitty/kittens/choose-fonts/#font-spec-
 #: syntax>.
 
-font_size 18
+font_size 16
 
 #: Font size (in pts).
 
@@ -1330,7 +1330,7 @@ confirm_os_window_close 0
 
 #: The foreground and background colors.
 
-# background_opacity 1.0
+#background_opacity .9
 
 #: The opacity of the background. A number between zero and one, where
 #: one is opaque and zero is fully transparent. This will only work if

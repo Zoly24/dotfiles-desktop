@@ -23,7 +23,7 @@ ColumnLayout {
         Rectangle {
             id: mainAudioSinkDropdown
             anchors.verticalCenter: parent.verticalCenter
-            width: 400
+            width: column.config.audioMenuWidth - 100
             height: column.config.audioItemHeight
             radius: Math.min(mainAudioSinkDropdown.height, mainAudioSinkDropdown.width) / 2
             color: Colorscheme.bgAccent
@@ -37,6 +37,8 @@ ColumnLayout {
                 anchors.left: parent.left
                 anchors.margins: column.config.audioViewTextMargin
 
+                font.pixelSize: column.config.fontSize
+                font.family: column.config.fontFamily
                 text: AudioService.currentSinkName
                 color: "white"
             }
@@ -49,6 +51,7 @@ ColumnLayout {
             buttonHeight: mainAudioSinkDropdown.height
             buttonWidth: buttonHeight
             icon: AudioService.isSinkMuted ? "󰝟" : "󰕾"
+            config: column.config
             onClicked: {
                 AudioService.toggleAudioSinkMute()
             }
@@ -77,6 +80,8 @@ ColumnLayout {
             anchors.right: mainAudioSinkSlider.right
             anchors.margins: 15
             color: Colorscheme.primaryAccent
+            font.pixelSize: column.config.fontSize
+            font.family: column.config.fontFamily
             text: AudioService.isSinkMuted ? "Muted" : Math.round(AudioService.getSinkVolume() * 100) + "%"
         }
     }
@@ -96,7 +101,7 @@ ColumnLayout {
         Rectangle {
             id: mainAudioSourceDropdown
             anchors.verticalCenter: parent.verticalCenter
-            width: 400
+            width: column.config.audioMenuWidth - 100
             height: column.config.audioItemHeight
             radius: Math.min(mainAudioSourceDropdown.height, mainAudioSourceDropdown.width) / 2
             color: Colorscheme.bgAccent
@@ -110,6 +115,8 @@ ColumnLayout {
                 anchors.left: parent.left
                 anchors.margins: column.config.audioViewTextMargin
 
+                font.pixelSize: column.config.fontSize
+                font.family: column.config.fontFamily
                 text: AudioService.currentSourceName
                 color: "white"
             }
@@ -122,6 +129,7 @@ ColumnLayout {
             buttonHeight: mainAudioSourceDropdown.height
             buttonWidth: buttonHeight
             icon: AudioService.isSourceMuted ? "" : ""
+            config: column.config
             onClicked: {
                 AudioService.toggleAudioSourceMute()
             }
@@ -150,6 +158,8 @@ ColumnLayout {
             anchors.right: mainAudioSourceSlider.right
             anchors.margins: 15
             color: Colorscheme.primaryAccent
+            font.family: column.config.fontFamily
+            font.pixelSize: column.config.fontSize
             text: AudioService.isSourceMuted ? "Muted" : Math.round(AudioService.getSourceVolume() * 100) + "%"
         }
     }
