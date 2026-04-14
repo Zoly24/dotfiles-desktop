@@ -21,7 +21,15 @@ export OPENCLAW_AUTH_TOKEN="ollama"
 # ==============================================================================
 # 2. OH-MY-ZSH CONFIGURATION
 # ==============================================================================
-eval "$(starship init zsh)"
+
+# For the prompt
+autoload -Uz vcs_info
+precmd() { vcs_info }
+zstyle ':vcs_info:git:*' formats '%F{red}%b%f'
+setopt PROMPT_SUBST
+PROMPT='%F{blue}%~%f ${vcs_info_msg_0_}
+> '
+
 plugins=(git)
 
 # Initialize Oh My Zsh
@@ -43,7 +51,7 @@ alias neonotes='NVIM_APPNAME=nvim-obsidian nvim'
 alias notesync='cd ~/Documents/Vaults/OS-Notes/ && git add . && git commit -m "update $(date)" && git push'
 
 # University of Texas Remote Access
-alias utsshfs='sshfs alexw24@sapphire.cs.utexas.edu: ~/remote-sshfs/'
+alias utsshfs='sshfs alexw24@sapphire.cs.utexas.edu: ~/remote-sshfs/ -o cache=yes -o kernel_cache -o compression=yes -o auto_cache -o reconnect'
 alias utssh='kitten ssh alexw24@sapphire.cs.utexas.edu'
 alias utumount='fusermount3 -u ~/remote-sshfs/'
 
